@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  @apply bg-background text-text-primary font-sans;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary bg-opacity-70 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.text-gradient-reverse {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
+}
+
+.text-gradient-accent {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary;
+}
+
+.bg-gradient {
+  @apply bg-gradient-to-r from-primary to-secondary;
+}
+
+.bg-gradient-subtle {
+  @apply bg-gradient-to-r from-background-light to-background-lighter;
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium text-text-secondary mb-12;
+  }
+
+  .link-underline {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-primary after:bottom-0 after:left-0 
+      after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+}

@@ -1,0 +1,28 @@
+.glow-border {
+  position: relative;
+  display: inline-block;
+  padding: 0.4rem 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.glow-border::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  z-index: -1;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  filter: blur(5px);
+}
+
+.glow-border:hover::after {
+  opacity: 1;
+}
