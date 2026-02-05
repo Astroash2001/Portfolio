@@ -28,7 +28,7 @@ export const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const SERVICE_ID = "service_c71e8g3";
+  const SERVICE_ID = "service_x8cb7wg";
   const TEMPLATE_ID = "template_p5fad8y";
   const USER_ID = "O2k03YXrpgMk_gJBc"; // You can find this in your EmailJS dashboard
 
